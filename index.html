@@ -2,12 +2,109 @@
 <html>
 <head>
     <title>MQTIQNS</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#111;
+            color:white;
+            font-family:Arial, sans-serif;
+            display:flex;
+        }
+
+        .sidebar{
+            width:220px;
+            padding:40px;
+            position:fixed;
+            height:100vh;
+        }
+
+        .sidebar h1{
+            font-size:18px;
+            margin-bottom:25px;
+            letter-spacing:2px;
+        }
+
+        .sidebar p{
+            color:#999;
+            margin-bottom:10px;
+        }
+
+        .gallery{
+            margin-left:260px;
+            padding:50px;
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:40px;
+            width:100%;
+        }
+
+        .gallery img{
+            width:100%;
+            display:block;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .gallery img:hover{
+            opacity:.75;
+        }
+
+        .lightbox{
+            display:none;
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,.95);
+            justify-content:center;
+            align-items:center;
+        }
+
+        .lightbox img{
+            max-width:90%;
+            max-height:90%;
+        }
+    </style>
 </head>
+
 <body>
 
+<div class="sidebar">
     <h1>MQTIQNS</h1>
+    <p>Illustrator</p>
+    <p>Animator</p>
+</div>
 
-    <p>Illustrator & Animator</p>
+<div class="gallery">
+
+<img src="images/crown-character.jpg" onclick="openImage(this.src)">
+<img src="images/fanart-character.png" onclick="openImage(this.src)">
+<img src="images/fanart-1.jpg" onclick="openImage(this.src)">
+
+<img src="images/anatomy-study.jpg" onclick="openImage(this.src)">
+<img src="images/tank-study.jpg" onclick="openImage(this.src)">
+<img src="images/phantom-jelly.jpg" onclick="openImage(this.src)">
+
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openImage(src){
+    document.getElementById("lightbox").style.display="flex";
+    document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+    document.getElementById("lightbox").style.display="none";
+}
+</script>
 
 </body>
 </html>
