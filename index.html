@@ -68,6 +68,27 @@
             max-width:90%;
             max-height:90%;
         }
+        @media (max-width: 768px) {
+
+    .sidebar{
+        position:static;
+        width:100%;
+        height:auto;
+        padding:25px;
+    }
+
+    body{
+        flex-direction:column;
+    }
+
+    .gallery{
+        margin-left:0;
+        padding:25px;
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+}
     </style>
 </head>
 
