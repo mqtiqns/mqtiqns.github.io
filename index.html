@@ -1,139 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MQTIQNS</title>
-
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-            background:#111;
-            color:white;
-            font-family:Arial, sans-serif;
-            display:flex;
-        }
-
-        .sidebar{
-            width:220px;
-            padding:40px;
-            position:fixed;
-            height:100vh;
-        }
-
-        .sidebar h1{
-            font-size:18px;
-            margin-bottom:25px;
-            letter-spacing:2px;
-        }
-
-        .sidebar p{
-            color:#999;
-            margin-bottom:10px;
-        }
-
-        .gallery{
-            margin-left:260px;
-            padding:50px;
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:40px;
-            width:100%;
-        }
-
-        .gallery img{
-            width:100%;
-            display:block;
-            cursor:pointer;
-            transition:0.3s;
-            aspect-ratio:1/1;
-            object-fit:cover;
-        }
-
-        .gallery img:hover{
-            opacity:.75;
-        }
-
-        .lightbox{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.95);
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
-}
-
-        .lightbox img{
-            max-width:90%;
-            max-height:90%;
-        }
-        @media (max-width: 768px) {
-
-    .sidebar{
-        position:static;
-        width:100%;
-        height:auto;
-        padding:25px;
-    }
-
-    body{
-        flex-direction:column;
-    }
-
-    .gallery{
-        margin-left:0;
-        padding:25px;
-        grid-template-columns:1fr;
-        gap:25px;
-    }
-
-}
-    </style>
-</head>
-
 <body>
 
 <div class="sidebar">
     <h1>MQTIQNS</h1>
-    <p>Animations</p>
-    <p>Illustrations</p>
+
+    <p>
+        <a href="animations.html">Animations</a>
+    </p>
+
+    <p>
+        <a href="illustrations.html">Illustrations</a>
+    </p>
 </div>
-
-<div class="gallery">
-
-<img src="images/one.jpg" onclick="openImage(this.src)">
-<img src="images/two.jpg" onclick="openImage(this.src)">
-<img src="images/three.jpg" onclick="openImage(this.src)">
-
-<img src="images/four.jpg" onclick="openImage(this.src)">
-<img src="images/five.jpg" onclick="openImage(this.src)">
-<img src="images/six.jpg" onclick="openImage(this.src)">
-
-<img src="images/seven.jpg" onclick="openImage(this.src)">
-<img src="images/eight.jpg" onclick="openImage(this.src)">
-<img src="images/nine.jpg" onclick="openImage(this.src)">
-
-</div>
-
-<div class="lightbox" id="lightbox" onclick="closeImage()">
-    <img id="lightbox-img">
-</div>
-
-<script>
-function openImage(src){
-    document.getElementById("lightbox").style.display="flex";
-    document.getElementById("lightbox-img").src=src;
-}
-
-function closeImage(){
-    document.getElementById("lightbox").style.display="none";
-}
-</script>
 
 </body>
-</html>
