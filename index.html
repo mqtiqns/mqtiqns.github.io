@@ -1,6 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTIQNS</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#111;
+            color:white;
+            font-family:Arial, sans-serif;
+            display:flex;
+        }
+
+        .sidebar{
+            width:220px;
+            padding:40px;
+            position:fixed;
+            height:100vh;
+        }
+
+        .sidebar h1{
+            font-size:18px;
+            margin-bottom:25px;
+            letter-spacing:2px;
+        }
+
+        .sidebar p{
+            margin-bottom:10px;
+        }
+
+        .sidebar a{
+            color:#999;
+            text-decoration:none;
+        }
+
+        .sidebar a:hover{
+            color:white;
+        }
+
+        .email{
+            position:absolute;
+            bottom:40px;
+            color:#999;
+            font-size:14px;
+        }
+
+        @media (max-width: 768px){
+
+            .sidebar{
+                position:static;
+                width:100%;
+                height:auto;
+                padding:25px;
+            }
+
+            .email{
+                position:static;
+                margin-top:30px;
+            }
+
+        }
+    </style>
+</head>
+
 <body>
 
 <div class="sidebar">
+
     <h1>MQTIQNS</h1>
 
     <p>
@@ -10,6 +82,12 @@
     <p>
         <a href="illustrations.html">Illustrations</a>
     </p>
+
+    <div class="email">
+        contact@mqtiqns.com
+    </div>
+
 </div>
 
 </body>
+</html>
