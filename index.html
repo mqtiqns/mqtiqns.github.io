@@ -72,20 +72,6 @@
             max-width:100%;
             object-fit:contain;
             object-position:center;
-            animation:drift 9s ease-in-out infinite;
-        }
-
-        @keyframes drift{
-            0%,100%{ transform:translate(0,0) rotate(0deg); }
-            25%{ transform:translate(6px,-8px) rotate(0.4deg); }
-            50%{ transform:translate(0,-14px) rotate(0deg); }
-            75%{ transform:translate(-6px,-6px) rotate(-0.4deg); }
-        }
-
-        @media (prefers-reduced-motion: reduce){
-            .hero img{
-                animation:none;
-            }
         }
 
         @media (max-width: 768px){
